@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
             totalMark
         };
 
-        fetch('YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL', {
+        fetch('https://script.google.com/macros/s/AKfycbxkhUFWs92wt3hvmJoq5Rm4bLE1C99VgKp7HKrJ4L89JHpwNgh18DpmOktG9POvGHit8g/exec', {
             method: 'POST',
             mode: 'no-cors',
             headers: {
