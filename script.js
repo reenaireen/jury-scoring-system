@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const totalMarkInput = document.getElementById('total-mark');
     const groupSelect = document.getElementById('group');
     const groupPoster = document.getElementById('group-poster');
-    const leftPanel = document.querySelector('.left-panel');
     const form = document.querySelector('form');
 
     criteriaRadios.forEach(radio => {
@@ -105,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
             totalMark
         };
 
-        fetch('https://script.google.com/macros/s/AKfycbxkhUFWs92wt3hvmJoq5Rm4bLE1C99VgKp7HKrJ4L89JHpwNgh18DpmOktG9POvGHit8g/exec', {
+        fetch('YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL', {
             method: 'POST',
             mode: 'no-cors',
             headers: {
@@ -123,4 +122,3 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-ss
