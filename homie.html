@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jury Scoring System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>SISTEM PEMARKAHAN JURI</h1>
+        </header>
+        <div class="content">
+            <div class="left-panel">
+                <img id="group-poster" src="image.jpg" alt="Default Poster">
+            </div>
+            <div class="right-panel">
+                <form>
+                    <div class="jury-select">
+                        <label for="jury-name">Jury Name :</label>
+                        <select id="jury-name" name="jury-name">
+                            <option value="" disabled selected>Select Jury</option>
+                            <option value="jury1">Jury 1</option>
+                            <option value="jury2">Jury 2</option>
+                            <option value="jury3">Jury 3</option>
+                            <!-- Add more juries as needed -->
+                        </select>
+                    </div>
+                    <div class="group-select">
+                        <label for="group">Select Group :</label>
+                        <select id="group" name="group">
+                            <option value="" disabled selected>Select Group</option>
+                            <option value="group1">Group 1</option>
+                            <option value="group2">Group 2</option>
+                            <option value="group3">Group 3</option>
+                            <!-- Add more groups as needed -->
+                        </select>
+                    </div>
+                    <div class="criteria">
+                        <label>Criteria 1 :</label>
+                        <div class="radio-group">
+                            <input type="radio" name="criteria1" value="5"> 5
+                            <input type="radio" name="criteria1" value="10"> 10
+                            <input type="radio" name="criteria1" value="15"> 15
+                            <input type="radio" name="criteria1" value="20"> 20
+                            <input type="radio" name="criteria1" value="25"> 25
+                        </div>
+                    </div>
+                    <div class="criteria">
+                        <label>Criteria 2 :</label>
+                        <div class="radio-group">
+                            <input type="radio" name="criteria2" value="5"> 5
+                            <input type="radio" name="criteria2" value="10"> 10
+                            <input type="radio" name="criteria2" value="15"> 15
+                            <input type="radio" name="criteria2" value="20"> 20
+                            <input type="radio" name="criteria2" value="25"> 25
+                        </div>
+                    </div>
+                    <div class="criteria">
+                        <label>Criteria 3 :</label>
+                        <div class="radio-group">
+                            <input type="radio" name="criteria3" value="5"> 5
+                            <input type="radio" name="criteria3" value="10"> 10
+                            <input type="radio" name="criteria3" value="15"> 15
+                            <input type="radio" name="criteria3" value="20"> 20
+                            <input type="radio" name="criteria3" value="25"> 25
+                        </div>
+                    </div>
+                    <div class="criteria">
+                        <label>Criteria 4 :</label>
+                        <div class="radio-group">
+                            <input type="radio" name="criteria4" value="5"> 5
+                            <input type="radio" name="criteria4" value="10"> 10
+                            <input type="radio" name="criteria4" value="15"> 15
+                            <input type="radio" name="criteria4" value="20"> 20
+                            <input type="radio" name="criteria4" value="25"> 25
+                        </div>
+                    </div>
+                    <div class="criteria">
+                        <label>Criteria 5 :</label>
+                        <div class="radio-group">
+                            <input type="radio" name="criteria5" value="5"> 5
+                            <input type="radio" name="criteria5" value="10"> 10
+                            <input type="radio" name="criteria5" value="15"> 15
+                            <input type="radio" name="criteria5" value="20"> 20
+                            <input type="radio" name="criteria5" value="25"> 25
+                        </div>
+                    </div>
+                    <div class="criteria">
+                        <label>Criteria 6 :</label>
+                        <div class="radio-group">
+                            <input type="radio" name="criteria6" value="5"> 5
+                            <input type="radio" name="criteria6" value="10"> 10
+                            <input type="radio" name="criteria6" value="15"> 15
+                            <input type="radio" name="criteria6" value="20"> 20
+                            <input type="radio" name="criteria6" value="25"> 25
+                        </div>
+                    </div>
+                    <div class="total-mark">
+                        <label>Total Mark :</label>
+                        <input type="text" id="total-mark" readonly>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <footer class="footer">
+            <p>© copyright 2024</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
