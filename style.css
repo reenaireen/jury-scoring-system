@@ -91,6 +91,9 @@ body {
 
 .total-mark {
     margin-top: 20px;
+     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .total-mark label {
