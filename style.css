@@ -12,7 +12,7 @@ body {
     flex-direction: column;
 }
 
-.header {
+.header , .footer {
     background-color: #8200E6;
     color: white;
     text-align: center;
@@ -110,12 +110,4 @@ body {
     border-radius: 5px;
 }
 
-/* Footer */
-.footer {
-    background-color: #8200E6;
-    color: white;
-    text-align: center;
-    padding: 5px 0;
-    font-size: 15px;
-    margin-top: auto;
-}
+
