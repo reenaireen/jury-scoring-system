@@ -105,8 +105,5 @@ body {
     text-align: center;
     padding: 9px 0;
     font-size: 20px;
-    width: 100%;  /* Ensure the footer spans the full width */
-    position: relative;  /* Make sure it's not fixed to the bottom of the viewport */
-    bottom: 0;
-    left: 0;
+   
 }
