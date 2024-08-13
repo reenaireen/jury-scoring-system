@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function updateGroupPoster() {
         const selectedGroup = groupSelect.value;
         if (selectedGroup) {
-            const imagePath = `${selectedGroup}`;
+            const imagePath = `gambar/${selectedGroup}`;
             const imageExtensions = ['jpg', 'png'];
             const pdfExtension = 'pdf';
             let found = false;
@@ -67,18 +67,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 })
                 .catch(() => {
                     if (!found) {
-                        groupPoster.src = 'default.jpg';
+                        groupPoster.src = 'gambar/default.jpg';
                         groupPoster.style.display = 'block';
                         if (groupPoster.tagName.toLowerCase() !== 'img') {
-                            groupPoster.outerHTML = `<img id="group-poster" src="default.jpg" alt="Default Poster">`;
+                            groupPoster.outerHTML = `<img id="group-poster" src="gambar/default.jpg" alt="Default Poster">`;
                         }
                     }
                 });
         } else {
-            groupPoster.src = 'default.jpg';
+            groupPoster.src = 'gambar/default.jpg';
             groupPoster.style.display = 'block';
             if (groupPoster.tagName.toLowerCase() !== 'img') {
-                groupPoster.outerHTML = `<img id="group-poster" src="default.jpg" alt="Default Poster">`;
+                groupPoster.outerHTML = `<img id="group-poster" src="gambar/default.jpg" alt="Default Poster">`;
             }
         }
     }
