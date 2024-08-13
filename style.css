@@ -10,7 +10,7 @@ body {
     flex-direction: column;
 }
 
-.header, .footer {
+.header {
     background-color: #8200E6;
     color: white;
     text-align: center;
@@ -21,14 +21,6 @@ body {
 .header h1 {
     margin: 1;
     font-size: 24px;
-}
-
-/* Ensure the header stays horizontal */
-.header-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .content {
@@ -104,4 +96,17 @@ body {
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+/* Footer styling to keep it horizontal */
+.footer {
+    background-color: #8200E6;
+    color: white;
+    text-align: center;
+    padding: 9px 0;
+    font-size: 20px;
+    width: 100%;  /* Ensure the footer spans the full width */
+    position: relative;  /* Make sure it's not fixed to the bottom of the viewport */
+    bottom: 0;
+    left: 0;
 }
