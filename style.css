@@ -98,12 +98,15 @@ body {
     border-radius: 5px;
 }
 
-/* Footer styling to keep it horizontal */
+   
 .footer {
     background-color: #8200E6;
     color: white;
     text-align: center;
     padding: 9px 0;
     font-size: 20px;
-   
+    width: 100%; /* Ensures the footer spans the full width of the container */
+    position: relative; /* Keeps it at the bottom of the content */
+    bottom: 0; /* Ensures it stays at the bottom of the page */
 }
+
