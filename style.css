@@ -111,10 +111,12 @@ body {
 }
 
 .footer {
-     background-color: #8200E6;
+    background-color: #8200E6;
     color: white;
     text-align: center;
-    padding: 5px 0;
-    font-size: 15px;
+    padding: 2px 0; /* Reduced padding to decrease height */
+    font-size: 18px; /* You can also reduce this if needed */
     margin-top: auto;
+    height: 30px; /* Set a fixed height if necessary */
+    line-height: 30px; /* Center text vertically if using a fixed height */
 }
