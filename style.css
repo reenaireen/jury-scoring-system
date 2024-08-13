@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-     display: flex;
+    display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
@@ -26,8 +26,8 @@ body {
 }
 
 .content {
-    display: flex;
     flex: 1;
+    display: flex;
 }
 
 .left-panel {
@@ -110,6 +110,7 @@ body {
     border-radius: 5px;
 }
 
+/* Footer */
 .footer {
     background-color: #8200E6;
     color: white;
