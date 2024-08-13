@@ -109,6 +109,8 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
+/* Footer */
 .footer {
     background-color: #8200E6;
     color: white;
@@ -117,4 +119,3 @@ body {
     font-size: 15px;
     margin-top: auto;
 }
-
