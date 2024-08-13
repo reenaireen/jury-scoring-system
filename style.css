@@ -47,6 +47,8 @@ body {
     background-color: #00E4D0;
     padding: 20px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 
 .jury-select, .group-select {
@@ -67,6 +69,8 @@ body {
 
 .criteria {
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .criteria label {
@@ -76,6 +80,9 @@ body {
 
 .radio-group {
     margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .radio-group input {
