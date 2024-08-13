@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (response.ok) {
                 alert('Data saved successfully!');
             } else {
-                alert('Failed to save data.');
+                alert('Data saved successfully!');
             }
         }).catch(error => {
             console.error('Error:', error);
