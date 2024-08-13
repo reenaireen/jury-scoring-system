@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
             body: JSON.stringify(data)
         }).then(response => {
             if (response.ok) {
-                alert('Failed to save data');
+                alert('Data saved successfully!');
             } else {
                 alert('Data saved successfully!');
             }
