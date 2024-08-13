@@ -10,14 +10,24 @@ body {
     flex-direction: column;
 }
 
-.header, .footer {
+.header {
     background-color: #8200E6;
     color: white;
     text-align: center;
     padding: 9px 0;
     font-size: 20px;
 }
-
+    .footer {
+    background-color: #8200E6;
+    color: white;
+    text-align: center;
+    padding: 9px 0;
+    font-size: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
 .header h1 {
     margin: 1;
     font-size: 24px;
