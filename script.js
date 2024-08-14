@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function updateTotalMark() {
         let totalMark = 0;
-        for (let i = 1; i <= 7; i++) {
+        for (let i = 1; i <= 10; i++) {
             const selectedRadio = document.querySelector(`input[name="criteria${i}"]:checked`);
             if (selectedRadio) {
                 totalMark += parseInt(selectedRadio.value);
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const juryName = document.getElementById('jury-name').value;
         const groupName = document.getElementById('group').value;
         const criteria = [];
-        for (let i = 1; i <= 7; i++) {
+        for (let i = 1; i <= 10; i++) {
             const selectedRadio = document.querySelector(`input[name="criteria${i}"]:checked`);
             if (selectedRadio) {
                 criteria.push(parseInt(selectedRadio.value));
