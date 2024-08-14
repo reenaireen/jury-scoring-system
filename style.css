@@ -28,6 +28,7 @@ body {
     display: flex;
     flex: 1;
 }
+
 .left-panel {
     width: 40%;
     background-color: #00C1DE;
@@ -110,4 +111,29 @@ body {
     position: fixed; /* Keeps it at the bottom of the content */
     bottom: 0;
 left:0; /* Ensures it stays at the bottom of the page */
+}
+
+/* Button styles */
+.form-actions button[type="submit"] {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.form-actions button[type="reset"] {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-actions button[type="submit"]:hover,
+.form-actions button[type="reset"]:hover {
+    opacity: 0.8;
 }
