@@ -27,7 +27,6 @@ body {
 
 .content {
     flex: 1; /* Content will grow to fill available space */
-    padding-bottom: 60px;
     display: flex;
 }
 
@@ -107,7 +106,7 @@ body {
     text-align: center;
     padding: 9px 0;
     font-size: 20px;
-    position: relative;
+    position: static;
     bottom: 0;
     width: 100%;
     margin-top: auto; /* Pushes the footer to the bottom if content is short */
