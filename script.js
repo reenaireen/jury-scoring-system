@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
     criteriaRadios.forEach(radio => {
         radio.addEventListener('change', updateTotalMark);
     });
-
     groupSelect.addEventListener('change', updateGroupPoster);
 
     form.addEventListener('submit', function (e) {
