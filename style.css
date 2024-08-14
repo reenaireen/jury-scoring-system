@@ -8,6 +8,7 @@ body {
 
 .container {
     flex: 1; /* Allows the container to grow and fill the remaining space */
+    min-height: 100vh
     display: flex;
     flex-direction: column;
 }
@@ -27,6 +28,7 @@ body {
 
 .content {
     flex: 1; /* Content will grow to fill available space */
+    padding-bottom: 60px;
     display: flex;
 }
 
