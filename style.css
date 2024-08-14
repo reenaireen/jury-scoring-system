@@ -1,4 +1,4 @@
-body {
+ body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
@@ -110,7 +110,7 @@ body {
     font-size: 20px;
     position: fixed; /* Keeps it at the bottom of the content */
     bottom: 0;
-left:0; /* Ensures it stays at the bottom of the page */
+    left:0; /* Ensures it stays at the bottom of the page */
 }
 
 /* Button styles */
