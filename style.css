@@ -1,11 +1,13 @@
- body {
+body {
     margin: 0;
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .container {
-    width: 100%;
-    min-height: 100vh;
+    flex: 1; /* Allows the container to grow and fill the remaining space */
     display: flex;
     flex-direction: column;
 }
@@ -24,9 +26,9 @@
 }
 
 .content {
- padding-bottom: 60px;
+    flex: 1; /* Content will grow to fill available space */
+    padding-bottom: 60px;
     display: flex;
-    flex: 1;
 }
 
 .left-panel {
@@ -36,7 +38,6 @@
     justify-content: start;
     align-items: start;
     padding: 1px;
-
 }
 
 .left-panel img, .left-panel iframe {
@@ -100,17 +101,16 @@
     border-radius: 5px;
 }
 
-   
 .footer {
     background-color: #8200E6;
     color: white;
     text-align: center;
     padding: 9px 0;
-    width: 100%;
     font-size: 20px;
-    position: fixed; /* Keeps it at the bottom of the content */
+    position: relative;
     bottom: 0;
-    left:0; /* Ensures it stays at the bottom of the page */
+    width: 100%;
+    margin-top: auto; /* Pushes the footer to the bottom if content is short */
 }
 
 /* Button styles */
