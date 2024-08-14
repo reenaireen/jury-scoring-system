@@ -106,7 +106,7 @@ body {
     padding: 9px 0;
     width: 100%;
     font-size: 20px;
-    position: fixed; /* Keeps it at the bottom of the content */
+    position: absolute; /* Keeps it at the bottom of the content */
     bottom: 0; /* Ensures it stays at the bottom of the page */
 }
 
