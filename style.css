@@ -34,7 +34,7 @@ body {
     background-color: #00C1DE;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     padding: 1px;
 
 }
