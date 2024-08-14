@@ -28,7 +28,6 @@ body {
     display: flex;
     flex: 1;
 }
-
 .left-panel {
     width: 40%;
     background-color: #00C1DE;
