@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const criteriaRadios = document.querySelectorAll('input[type="radio"]');
     const totalMarkInput = document.getElementById('total-mark');
     const groupSelect = document.getElementById('group');
-    const groupPoster = document.getElementById('group-poster');
+    let groupPoster = document.getElementById('group-poster');
     const form = document.querySelector('form');
 
     criteriaRadios.forEach(radio => {
@@ -35,24 +35,34 @@ document.addEventListener('DOMContentLoaded', function () {
             const pdfExtension = 'pdf';
             let found = false;
 
+            // Reset groupPoster to its default state before loading new content
+            groupPoster.src = '';
+            groupPoster.style.display = 'none';
+
+            // Function to handle image load success
+            const handleImageLoad = function (src) {
+                if (!found) {
+                    found = true;
+                    groupPoster.src = src;
+                    groupPoster.style.display = 'block';
+                    if (groupPoster.tagName.toLowerCase() !== 'img') {
+                        groupPoster.outerHTML = `<img id="group-poster" src="${src}" alt="Poster for ${selectedGroup}">`;
+                        groupPoster = document.getElementById('group-poster');
+                    }
+                }
+            };
+
             // Check for image files
             for (const ext of imageExtensions) {
                 const img = new Image();
-                img.src = `${imagePath}.${ext}`;
-                img.onload = function() {
-                    if (!found) {
-                        found = true;
-                        groupPoster.src = this.src;
-                        groupPoster.style.display = 'block';
-                        if (groupPoster.tagName.toLowerCase() !== 'img') {
-                            groupPoster.outerHTML = `<img id="group-poster" src="${this.src}" alt="Poster for ${selectedGroup}">`;
-                        }
-                    }
+                img.src = `${imagePath}.${ext}?${new Date().getTime()}`; // Cache busting
+                img.onload = function () {
+                    handleImageLoad(this.src);
                 };
             }
 
             // Check for PDF file
-            const pdfUrl = `${imagePath}.${pdfExtension}`;
+            const pdfUrl = `${imagePath}.${pdfExtension}?${new Date().getTime()}`; // Cache busting
             fetch(pdfUrl)
                 .then(response => {
                     if (response.ok && !found) {
@@ -60,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         groupPoster.style.display = 'none';
                         if (groupPoster.tagName.toLowerCase() !== 'iframe') {
                             groupPoster.outerHTML = `<iframe id="group-poster" src="${pdfUrl}" width="100%" height="100%" frameborder="0"></iframe>`;
+                            groupPoster = document.getElementById('group-poster');
                         } else {
                             groupPoster.src = pdfUrl;
                         }
@@ -71,6 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         groupPoster.style.display = 'block';
                         if (groupPoster.tagName.toLowerCase() !== 'img') {
                             groupPoster.outerHTML = `<img id="group-poster" src="gambar/default.jpg" alt="Default Poster">`;
+                            groupPoster = document.getElementById('group-poster');
                         }
                     }
                 });
@@ -79,6 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
             groupPoster.style.display = 'block';
             if (groupPoster.tagName.toLowerCase() !== 'img') {
                 groupPoster.outerHTML = `<img id="group-poster" src="gambar/default.jpg" alt="Default Poster">`;
+                groupPoster = document.getElementById('group-poster');
             }
         }
     }
