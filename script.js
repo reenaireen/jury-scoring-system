@@ -15,6 +15,20 @@ document.addEventListener('DOMContentLoaded', function () {
         sendDataToGoogleSheets();
     });
 
+    // Event listener for the reset button
+    document.querySelector('button[type="reset"]').addEventListener('click', function() {
+        // Reset the form
+        form.reset();
+
+        // Reset the image to the default image
+        groupPoster.src = 'gambar/default.jpg';
+        groupPoster.style.display = 'block';
+        if (groupPoster.tagName.toLowerCase() !== 'img') {
+            groupPoster.outerHTML = `<img id="group-poster" src="gambar/default.jpg" alt="Default Poster">`;
+            groupPoster = document.getElementById('group-poster');
+        }
+    });
+
     function updateTotalMark() {
         let totalMark = 0;
         for (let i = 1; i <= 20; i++) {
