@@ -8,7 +8,7 @@ body {
 
 .container {
     flex: 1; /* Allows the container to grow and fill the remaining space */
-    height: 100vh
+    min-height: 100vh
     display: flex;
     flex-direction: column;
 }
